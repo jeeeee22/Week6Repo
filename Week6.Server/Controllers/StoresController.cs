@@ -20,14 +20,12 @@ namespace Week6.Server.Controllers
             _context = context;
         }
 
-        // GET: api/Stores
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Store>>> GetStores()
         {
             return await _context.Stores.ToListAsync();
         }
 
-        // GET: api/Stores/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Store>> GetStore(int id)
         {
@@ -41,8 +39,7 @@ namespace Week6.Server.Controllers
             return store;
         }
 
-        // PUT: api/Stores/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStore(int id, Store store)
         {
@@ -72,8 +69,7 @@ namespace Week6.Server.Controllers
             return NoContent();
         }
 
-        // POST: api/Stores
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Store>> PostStore(Store store)
         {
@@ -83,7 +79,7 @@ namespace Week6.Server.Controllers
             return CreatedAtAction("GetStore", new { id = store.Id }, store);
         }
 
-        // DELETE: api/Stores/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStore(int id)
         {
